@@ -14,7 +14,6 @@
       }
     </style>
   </head>
-
   <body>
     <h1 hidden>Mandelbrot Set</h1>
     <canvas id="canvas" width="640" height="640"></canvas>
@@ -281,7 +280,11 @@
         canvas.addEventListener("touchmove", onTouchMove);
         canvas.addEventListener("touchend", onTouchEnd);
       }
-      initMandel("canvas", document.body.clientWidth||640, document.body.clientHeight||640);
+      initMandel(
+        "canvas",
+        document.body.clientWidth || 640,
+        document.body.clientHeight || 640
+      );
       computeMandel();
     </script>
   </body>
