@@ -1,2 +1,2 @@
-# mandelbrot
+# Mandelbrot Set
 Mandelbrot Set
