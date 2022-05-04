@@ -8,23 +8,15 @@
     <meta name="keywords" content="Mandelbrot Set" />
     <style>
       * {
-        margin: 0px;
-        padding: 0px;
-      }
-      body {
-        font-size: 10pt;
-        color: #999;
-        background-color: #222;
-      }
-      h1 {
-        font-size: 12px;
-        color: #f5f5f5;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
       }
     </style>
   </head>
 
   <body>
-    <h1>Mandelbrot Set</h1>
+    <h1 hidden>Mandelbrot Set</h1>
     <canvas id="canvas" width="640" height="640"></canvas>
     <script>
       let ctx;
@@ -289,7 +281,7 @@
         canvas.addEventListener("touchmove", onTouchMove);
         canvas.addEventListener("touchend", onTouchEnd);
       }
-      initMandel("canvas", 640, 640);
+      initMandel("canvas", document.body.clientWidth||640, document.body.clientHeight||640);
       computeMandel();
     </script>
   </body>
